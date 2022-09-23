@@ -1,6 +1,6 @@
 // If you don't want to use TypeScript you can delete this file!
 import * as React from 'react';
-import { PageProps, Link, HeadFC } from 'gatsby';
+import { PageProps, Link, HeadFC, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
@@ -47,10 +47,10 @@ export const Head: HeadFC<DataProps> = () => <Seo title="Using TypeScript" />;
 
 export default UsingTypescript;
 
-// export const query = graphql`
-//   {
-//     site {
-//       buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    site {
+      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+    }
+  }
+`;
